@@ -1,0 +1,82 @@
+{
+  "name": "pepkio-mol-mass-converter",
+  "version": "0.1.0",
+  "description": "Call the Pepkio Molecular Mass Converter REST API from Node.js with typed ESM imports and a CLI.",
+  "readme": "README_NPM.md",
+  "license": "MIT",
+  "author": "Pepkio Team",
+  "homepage": "https://www.pepkio.com/tools/mol-mass-converter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepkio/pepkio-mol-mass-converter-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pepkio/pepkio-mol-mass-converter-js/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "module",
+  "keywords": [
+    "mol-mass-converter",
+    "molecular-mass",
+    "od260",
+    "nanodrop",
+    "dna",
+    "rna",
+    "protein",
+    "concentration",
+    "a260-a280",
+    "purity",
+    "batch",
+    "extinction-coefficient",
+    "ng-per-ul",
+    "mg-per-ml",
+    "laboratory-calculator",
+    "pepkio",
+    "bioinformatics",
+    "life-sciences",
+    "typescript",
+    "node",
+    "rest-api",
+    "scientific-computing",
+    "esm",
+    "cli"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "pepkio-mol-mass-converter": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run test/client.test.ts",
+    "test:integration": "vitest run test/integration.test.ts",
+    "test:all": "vitest run"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "undici": "^7.27.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "dotenv": "^17.4.2",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  }
+}
